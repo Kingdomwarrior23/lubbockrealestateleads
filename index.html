@@ -54,8 +54,8 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"806 Pro — Lubbock Real Estate","url":"https://lubbockrealestateleads.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","bestRating":"5","worstRating":"1","reviewCount":"97"},"review":[{"@type":"Review","author":{"@type":"Person","name":"Kevin W."},"datePublished":"2025-08-10","reviewBody":"Closed on a southwest Lubbock home in 31 days, came in $8K under asking. Local knowledge made all the difference.","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},{"@type":"Review","author":{"@type":"Person","name":"Maria G."},"datePublished":"2025-09-03","reviewBody":"Moving from out of state — agent knew which 79423 streets have drainage issues and which Tech Terrace blocks have high rental turnover. Intel you can't get from Zillow.","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},{"@type":"Review","author":{"@type":"Person","name":"Thomas B."},"datePublished":"2025-10-15","reviewBody":"Sold my Maxey Park home in 18 days at 98% of asking while similar homes sat 70+ days. Correct pricing from day one.","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},{"@type":"Review","author":{"@type":"Person","name":"Ashley C."},"datePublished":"2025-11-08","reviewBody":"First-time buyer in Lubbock, agent walked me through every step. Closed on South Lubbock home $6K under list.","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}},{"@type":"Review","author":{"@type":"Person","name":"Robert N."},"datePublished":"2025-12-01","reviewBody":"Investor targeting Tech Terrace rental yields — agent had block-level data. Closed two properties in 60 days.","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"}}]}</script>
 
   <!-- GHL Chat Widget -->
-  <script>window.GHL_CHAT_LOCATION_ID = "jDoRsNEPg0qtXUYNouR3";</script>
-  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="jDoRsNEPg0qtXUYNouR3" defer></script>
+  <script>window.GHL_CHAT_LOCATION_ID = "qpJIthlI0j2Km9viDFGO";</script>
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="qpJIthlI0j2Km9viDFGO" defer></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -446,12 +446,12 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer pit-2c2c7097-c7d9-4f99-bfc4-0359c9fc805c', 'Version': '2021-07-28' },
         body: JSON.stringify({
-          locationId: 'jDoRsNEPg0qtXUYNouR3',
+          locationId: 'qpJIthlI0j2Km9viDFGO',
           firstName: name.split(' ')[0], lastName: name.split(' ').slice(1).join(' ') || '',
           phone, email: document.getElementById('email').value,
           address1: document.getElementById('address').value,
           city: 'Lubbock', state: 'TX', country: 'US',
-          tags: ['source:realestate-lubbock', '806pro', formData.service, formData.urgency].filter(Boolean),
+          tags: ['source:realestate-lubbock', 'type:consumer-lead', 'brand:806-pro', formData.service, formData.urgency].filter(Boolean),
           source: 'lubbockrealestateleads.com'
         })
       });
