@@ -442,9 +442,21 @@
     const phone = document.getElementById('phone').value.trim();
     if (!name || !phone) { btn.disabled = false; btn.textContent = 'Connect Me with a REALTOR →'; alert('Please enter your name and phone number.'); return; }
     try {
-      await fetch('https://services.leadconnectorhq.com/contacts/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer pit-2c2c7097-c7d9-4f99-bfc4-0359c9fc805c', 'Version': '2021-07-28' },
+      const payload = {
+  name: document.getElementById('name').value.trim(),
+  phone: document.getElementById('phone').value.trim(),
+  email: document.getElementById('email').value.trim(),
+  address: document.getElementById('address').value.trim(),
+  service: formData.service || '',
+  source: 'lubbockrealestateleads-homepage',
+  timestamp: new Date().toISOString()
+};
+try {
+  await fetch('https://services.leadconnectorhq.com/hooks/qpJIthlI0j2Km9viDFGO/webhook-trigger/cDZrMWtFAISoxkAWLimc', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });,
         body: JSON.stringify({
           locationId: 'qpJIthlI0j2Km9viDFGO',
           firstName: name.split(' ')[0], lastName: name.split(' ').slice(1).join(' ') || '',
